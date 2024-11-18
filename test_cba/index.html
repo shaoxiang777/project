@@ -228,17 +228,17 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Can we really trust every pixel during reconstruction?</h2>
 
-        <h3 class="title is-4">Comparison with RobustNeRF</h3>
         <div class="content has-text-justified">
           <p>
-            RobustNeRF employs hard thresholding to eliminate distractors, which makes it sensitive to the threshold value and may not generalize effectively in complex scenes.
-            Our method is more robust to the distractors and can handle more complicated scenes.
+            The quality of 3D reconstruction is inherently influenced by the input image qualities, specifically the color and depth information. However, these two types 
+            of data contribute unequally to the tracking and mapping processes. In this paper, we propose a predictive uncertainty to select valueable pixels for those 
+            two processes. Furthermore, we leverage this predictive uncertainty to guide a strategic bundle adjustment, thereby improving the overall accuracy and robustness of the reconstruction process.
 
           </p>
         </div>
         
         <div class="content has-text-centered" style="width: 80%; display: flex; justify-content: center; align-items: center">
-          <video class="video" width="70%" id="xyalias1" loop playsinline autoplay muted src="./media/uni-slam/resources/color.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+          <video class="video" width="70%" id="xyalias1" loop playsinline autoplay muted src="./media/uni-slam/resources/color_7.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
           <canvas height=0 class="videoMerge" id="xyalias1Merge" style="width: 80%;"></canvas>
         </div>
         
