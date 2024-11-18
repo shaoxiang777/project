@@ -219,6 +219,37 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. --> 
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Additional Results</h2>
+
+        <h3 class="title is-4">Comparison with RobustNeRF</h3>
+        <div class="content has-text-justified">
+          <p>
+            RobustNeRF employs hard thresholding to eliminate distractors, which makes it sensitive to the threshold value and may not generalize effectively in complex scenes.
+            Our method is more robust to the distractors and can handle more complicated scenes.
+
+          </p>
+        </div>
+        
+        <div class="content has-text-centered" style="width: 80%; display: flex; justify-content: center; align-items: center">
+          <video class="video" width="100%" id="xyalias1" loop playsinline autoplay muted src="./media/uni-slam/resources/bellevue_pj.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+          <canvas height=0 class="videoMerge" id="xyalias1Merge" style="width: 80%;"></canvas>
+        </div>
+        
+        <div class="content has-text-centered" style="width: 80%; display: flex; justify-content: center; align-items: center">
+          <video class="video" width="100%" id="xyalias2" loop playsinline autoplay muted src="./media/uni-slam/resources/rigi_pj.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+          <canvas height=0 class="videoMerge" id="xyalias2Merge" style="width: 80%;"></canvas>
+        </div>
+        
+    </div>
+
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-widescreen">
