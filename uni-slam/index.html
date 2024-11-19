@@ -221,9 +221,53 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifth">
+        <hr>
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Can we really trust every pixel during reconstruction?</h2>
 
-    <!-- Results. --> 
+        <div class="content has-text-justified">
+          <p>
+            The quality of 3D reconstruction is inherently influenced by the input image qualities, specifically color and depth information.
+            However, these two types of data contribute differently to the tracking and mapping processes. In this paper, we propose a predictive 
+            uncertainty framework to identify valuable pixels for these two processes. Additionally, we leverage this predictive uncertainty 
+            to guide a strategic bundle adjustment, thereby enhancing the overall accuracy and robustness of the reconstruction process.
+          </p>
+        </div>
+
+        <!-- Left and Right Columns -->
+        <div class="columns is-centered is-vcentered">
+          <!-- Left Column -->
+          <div class="column is-half has-text-centered">
+            <h2 class="title is-5">Color</h2>
+            <video class="video" width="100%" id="xyalias1" loop playsinline autoplay muted 
+              src="./media/uni-slam/resources/color_7.mp4" 
+              onplay="resizeAndPlay(this)" 
+              style="height: auto;"></video>
+            <canvas height=0 class="videoMerge" id="xyalias1Merge" style="width: 100%;"></canvas>
+          </div>
+
+          <!-- Right Column -->
+          <div class="column is-half has-text-centered">
+            <h2 class="title is-5">Depth Uncertainty</h2>
+            <video class="video" width="100%" id="xyalias2" loop playsinline autoplay muted 
+              src="./media/uni-slam/resources/uncertainty_7.mp4" 
+              onplay="resizeAndPlay(this)" 
+              style="height: auto;"></video>
+            <canvas height=0 class="videoMerge" id="xyalias2Merge" style="width: 100%;"></canvas>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered ">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Can we really trust every pixel during reconstruction?</h2>
