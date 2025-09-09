@@ -454,10 +454,6 @@
       </div>
     </div>
 
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-
         <h3>
             Comparisons to other methods
         </h3>
@@ -468,110 +464,96 @@
         </p>
 
         <div id="single-image-compare">
-            <div class="row m-2">
-                <div class="col-md-10">
-                    <ul class="nav nav-pills justify-content-center" role="navigation">
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-                                style="width: 110px"><strong>Comparison method:</strong></a>
-                        </li>
-                        <li class="nav-item method-pill" data-value="fsgs"><a class="nav-link active">FSGS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                        <li class="nav-item method-pill" data-value="instantsplat"><a class="nav-link">InstantSplat <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                        <li class="nav-item method-pill" data-value="zeronvs"><a class="nav-link">ZeroNVS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                        <li class="nav-item method-pill" data-value="viewcrafter"><a class="nav-link">ViewCrafter <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
-                        <li class="nav-item method-pill" data-value="2dgs_mesh"><a class="nav-link">2DGS* Mesh <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
-                        <!-- <li class="nav-item method-pill" data-value="reconfusion"><a class="nav-link">ReconFusion <span style="font-size: 10px;"><br>(3 View)</span></a></li> -->
-                    </ul>
-                </div>
+          <div class="row m-2">
+              <div class="col-md-10">
+                  <ul class="nav nav-pills justify-content-center" role="navigation">
+                      <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                              style="width: 110px"><strong>Comparison method:</strong></a>
+                      </li>
+                      <li class="nav-item method-pill" data-value="fsgs"><a class="nav-link active">FSGS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                      <li class="nav-item method-pill" data-value="instantsplat"><a class="nav-link">InstantSplat <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                      <li class="nav-item method-pill" data-value="zeronvs"><a class="nav-link">ZeroNVS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                      <li class="nav-item method-pill" data-value="viewcrafter"><a class="nav-link">ViewCrafter <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
+                      <li class="nav-item method-pill" data-value="2dgs_mesh"><a class="nav-link">2DGS* Mesh <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
+                      
+                  </ul>
+              </div>
 
-                <div class="btn-group btn-group-sm col-md-2 d-flex align-items-center" style="padding-top: 5px" id="mode-buttons">
-                    <!-- <button class="btn btn-primary mode-pill float-right active" data-value="rgb">
-                        RGB
-                    </button> -->
-                    <!-- <button class="btn btn-primary mode-pill float-right" data-value="depth">
-                        Depth
-                    </button> -->
-                </div>
-            </div>
+              <div class="btn-group btn-group-sm col-md-2 d-flex align-items-center" style="padding-top: 5px" id="mode-buttons">
+                  
+              </div>
+          </div>
 
-            <div class="video-container container position-relative p-0">
+          <div class="video-container container position-relative p-0">
 
-                <video class="video col-6" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
-                </video>
-                <canvas height=0 class="videoMerge" id="single-comp-leftMerge" style="width: 60%;"></canvas>
-                <!-- <video class="video col-6" id="single-comp-right" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
-                </video>
-                <canvas height=0 class="videoMerge" id="single-comp-rightMerge" style="width: 80%;"></canvas> -->
-
-                <!-- <div class="overlay position-absolute bg-dark top-0 start-0 text-white p-1 opacity-75"
-                    id="single-comp-label-left">Baseline</div>
-                <div class="overlay position-absolute bg-dark top-0 start-50 text-white p-1 opacity-75"
-                    id="single-comp-label-right">Ours</div> -->
-            </div>
+              <video class="video col-6" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
+              </video>
+              <canvas height=0 class="videoMerge" id="single-comp-leftMerge" style="width: 60%;"></canvas>
+  
+          </div>
 
 
 
-            <div class="pill-row scene-pills" id="any-pills" role="group" aria-relevant="additions text">
-                <div class="pill scene-pill" data-value="bicycle">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/bicycle.png" width="64">
-                </div>
+          <div class="pill-row scene-pills" id="any-pills" role="group" aria-relevant="additions text">
+              <div class="pill scene-pill" data-value="bicycle">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/bicycle.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="bonsai">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/bonsai.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="bonsai">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/bonsai.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="counter">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/counter.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="counter">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/counter.png" width="64">
+              </div>
 
-                <!-- <div class="pill scene-pill" data-value="flowers">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/flowers.png" width="64">
-                </div> -->
+              <div class="pill scene-pill" data-value="garden">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/garden.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="garden">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/garden.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="kitchen">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/kitchen.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="kitchen">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/kitchen.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="room">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/room.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="room">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/room.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="stump">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/stump.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="stump">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/stump.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="treehill">
+                  <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/treehill.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="treehill">
-                    <img class="thumbnail-img" src="thumbnails/3views/Mip-NeRF360/treehill.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="Barn">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Barn.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="Barn">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Barn.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="Caterpillar">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Caterpillar.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="Caterpillar">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Caterpillar.png" width="64">
-                </div>
+              <br>  <!-- break to second line -->
 
-                <div class="pill scene-pill" data-value="Family">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Family.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="Family">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Family.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="Horse">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Horse.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="Horse">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Horse.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="Ignatius">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Ignatius.png" width="64">
-                </div>
+              <div class="pill scene-pill" data-value="Ignatius">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Ignatius.png" width="64">
+              </div>
 
-                <div class="pill scene-pill" data-value="Truck">
-                    <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Truck.png" width="64">
-                </div>
-            </div>
+              <div class="pill scene-pill" data-value="Truck">
+                  <img class="thumbnail-img" src="thumbnails/4views/tanks_and_temples/Truck.png" width="64">
+              </div>
+          </div>
         </div>
 
         <script>
