@@ -439,325 +439,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h3>
-                        Comparisons to other methods
-                    </h3>
-
-                    <p class="text-justify" style="text-align: left;">
-                        Compare the renders and surface reconstruction of our method (right) with baseline methods (left) on Mip-NeRF 360 (3-view) and Tanks and Temples (4-view). Try selecting different
-                        methods and scenes!
-                    </p>
-
-                    <div id="single-image-compare">
-                        <div class="row m-2">
-                            <div class="col-md-10">
-                                <ul class="nav nav-pills justify-content-center" role="navigation">
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-                                            style="width: 110px"><strong>Comparison method:</strong></a>
-                                    </li>
-                                    <li class="nav-item method-pill" data-value="fsgs"><a class="nav-link active">FSGS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                                    <li class="nav-item method-pill" data-value="instantsplat"><a class="nav-link">InstantSplat <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                                    <li class="nav-item method-pill" data-value="zeronvs"><a class="nav-link">ZeroNVS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
-                                    <li class="nav-item method-pill" data-value="viewcrafter"><a class="nav-link">ViewCrafter <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
-                                    <li class="nav-item method-pill" data-value="2dgs_mesh"><a class="nav-link">2DGS* Mesh <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
-                                    <!-- <li class="nav-item method-pill" data-value="reconfusion"><a class="nav-link">ReconFusion <span style="font-size: 10px;"><br>(3 View)</span></a></li> -->
-                                </ul>
-                            </div>
-
-                            <div class="btn-group btn-group-sm col-md-2 d-flex align-items-center" style="padding-top: 5px" id="mode-buttons">
-                                <!-- <button class="btn btn-primary mode-pill float-right active" data-value="rgb">
-                                    RGB
-                                </button> -->
-                                <!-- <button class="btn btn-primary mode-pill float-right" data-value="depth">
-                                    Depth
-                                </button> -->
-                            </div>
-                        </div>
-
-                        <div class="video-container container position-relative p-0">
-
-                            <video class="video col-6" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
-                            </video>
-                            <canvas height=0 class="videoMerge" id="single-comp-leftMerge" style="width: 60%;"></canvas>
-                            <!-- <video class="video col-6" id="single-comp-right" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
-                            </video>
-                            <canvas height=0 class="videoMerge" id="single-comp-rightMerge" style="width: 80%;"></canvas> -->
-
-                            <!-- <div class="overlay position-absolute bg-dark top-0 start-0 text-white p-1 opacity-75"
-                                id="single-comp-label-left">Baseline</div>
-                            <div class="overlay position-absolute bg-dark top-0 start-50 text-white p-1 opacity-75"
-                                id="single-comp-label-right">Ours</div> -->
-                        </div>
-
-                        <div class="pill-row scene-pills" id="any-pills" role="group" aria-relevant="additions text">
-                            <div class="pill scene-pill" data-value="bicycle">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/bicycle.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="bonsai">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/bonsai.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="counter">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/counter.png">
-                            </div>
-
-                            <!-- <div class="pill scene-pill" data-value="flowers">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/flowers.png">
-                            </div> -->
-
-                            <div class="pill scene-pill" data-value="garden">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/garden.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="kitchen">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/kitchen.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="room">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/room.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="stump">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/stump.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="treehill">
-                                <img class="card-img" src="thumbnails/3views/Mip-NeRF360/treehill.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Barn">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Barn.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Caterpillar">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Caterpillar.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Family">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Family.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Horse">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Horse.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Ignatius">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Ignatius.png">
-                            </div>
-
-                            <div class="pill scene-pill" data-value="Truck">
-                                <img class="card-img" src="thumbnails/4views/tanks_and_temples/Truck.png">
-                            </div>
-                        </div>
-                    </div>
-
-                    <script>
-                        playbackSpeeds = {
-                            "fsgs": [1.0, 1.0],
-                            "instantsplat": [1.0, 1.0],
-                            "viewcrafter": [1.0, 1.0],
-                            "zeronvs": [1.0, 1.0],
-                            "2dgs_mesh": [1.0, 1.0],
-                            // "image_dream": [1.0, 1.0],
-                        };
-
-                        aspectRatios = {
-                            "fsgs": 1.5,
-                            "instantsplat": 1.5,
-                            "viewcrafter": 1.5,
-                            "zeronvs": 1.5,
-                            "2dgs_mesh": 1.5,
-                            // "image_dream": 1.0,
-                        }
-
-                        labels = {
-                            "fsgs": "FSGS*",
-                            "instantsplat": "InstantSplat",
-                            "viewcrafter": "ViewCrafter",
-                            "zeronvs": "ZeroNVS*",
-                            "2dgs_mesh": "2DGS*",
-                            // "image_dream": "ImageDream",
-                        }
-
-                        compareDiv = document.querySelector("#single-image-compare")
-                        activeMethod = "fsgs"
-                        activeScene = "bicycle"
-                        activeMode = "rgb"
-
-                        // Select all elements with the class 'method-pill'
-                        const methodPills = compareDiv.querySelectorAll('.method-pill');
-                        const modePillParent = compareDiv.querySelector('#mode-buttons')
-                        const modePills = modePillParent.querySelectorAll('.mode-pill')
-
-                        for (modePill of modePills) {
-                            modePill.addEventListener('click', function () {
-                                // activeMode = this.getAttribute('data-value');
-                                activeMode = 'rgb'
-                                updateDisplay();
-                            });
-                        }
-
-
-                        const videoParent = compareDiv.querySelector(".video-container");
-                        const leftVideo = videoParent.querySelector('#single-comp-left')
-                        const leftLabel = videoParent.querySelector("#single-comp-label-left")
-                        // const rightVideo = videoParent.querySelector('#single-comp-right')
-                        const scenePillContainers = compareDiv.querySelectorAll(`.scene-pills`);
-
-                        for (methodPill of methodPills) {
-                            const method = methodPill.getAttribute('data-value');
-                            // Select all scene pill containers
-                            const scenePillContainer = compareDiv.querySelector(`#any-pills`);
-                            const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
-
-                            for (scenePill of scenePills) {
-                                scenePill.addEventListener('click', function () {
-                                    activeScene = this.getAttribute("data-value")
-                                    console.log(activeScene);
-                                    updateDisplay();
-                                });
-                            }
-
-                            // Attach a click event listener to each pill
-                            methodPill.addEventListener('click', function () {
-                                activeMethod = method
-                                activeMode = "rgb"
-                                const scenePillContainer = compareDiv.querySelector(`#any-pills`);
-                                const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
-                                activeScene = scenePills[0].getAttribute("data-value")
-                                updateDisplay();
-                            });
-                        }
-
-                        function updateDisplay() {
-                            if (activeMethod == 'image_dream') {
-                                modePillParent.style.display = 'none';
-                            } else {
-                                modePillParent.style.display = '';
-                            }
-                            // Update active pill
-
-                            methodPills.forEach(p => p.classList.remove('active'));
-                            methodPills.forEach(methodPill => {
-                                if (methodPill.getAttribute('data-value') == activeMethod) {
-                                    methodPill.querySelector('a').classList.add('active');
-                                } else {
-                                    methodPill.querySelector('a').classList.remove('active')
-                                }
-                            });
-
-                            // Update mode pill
-                            for (modePill of modePills) {
-                                if (modePill.getAttribute('data-value') === activeMode) {
-                                    modePill.classList.add('active');
-                                } else {
-                                    modePill.classList.remove('active');
-                                }
-                            }
-
-                            // Show/Hide scene pill containers based on the selected method
-                            scenePillContainers.forEach(container => {
-                                if (container.id === `any-pills`) {
-                                    container.style.display = ''; // Or 'block' depending on your layout
-                                } else {
-                                    container.style.display = 'none';
-                                }
-                            });
-
-                            const scenePillContainer = compareDiv.querySelector(`#any-pills`);
-                            const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
-
-                            for (scenePill of scenePills) {
-                                if (scenePill.getAttribute('data-value') == activeScene) {
-                                    scenePill.classList.add('active');
-                                } else {
-                                    scenePill.classList.remove('active')
-                                }
-                            }
-
-                            var zdist = "";
-                            if (activeMode == "depth") {
-                                zdist = "_zdist";
-                            }
-
-                            // Update video display. This still has a small flash, could double buffer the video like before, but
-                            // as long as the layout stays consistent it really isn't bad.
-                            // leftVideo.src = `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
-                            leftVideo.src = activeMethod === '2dgs_mesh' ? 
-                                `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.webm` :
-                                `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
-                            var [lr, rr] = playbackSpeeds[activeMethod];
-                            leftVideo.playbackRate = lr;
-                            // rightVideo.playbackRate = rr;
-
-                            videoParent.style.aspectRatio = aspectRatios[activeMethod] * 2.0;
-
-                            console.log(leftLabel)
-                            console.log(leftLabel.innerHtml)
-
-                            leftLabel.innerHTML = labels[activeMethod];
-                        }
-                        // Update initial display
-                        updateDisplay()
-                    </script>
-                </div>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Animation. -->
@@ -766,35 +447,328 @@
         <h2 class="title is-2">Visualization Results</h2>
       </div>
     </div>
-    <!--/ Animation. -->
+    
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos_base with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>
+                    Comparisons to other methods
+                </h3>
+
+                <p class="text-justify" style="text-align: left;">
+                    Compare the renders and surface reconstruction of our method (right) with baseline methods (left) on Mip-NeRF 360 (3-view) and Tanks and Temples (4-view). Try selecting different
+                    methods and scenes!
+                </p>
+
+                <div id="single-image-compare">
+                    <div class="row m-2">
+                        <div class="col-md-10">
+                            <ul class="nav nav-pills justify-content-center" role="navigation">
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                                        style="width: 110px"><strong>Comparison method:</strong></a>
+                                </li>
+                                <li class="nav-item method-pill" data-value="fsgs"><a class="nav-link active">FSGS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                                <li class="nav-item method-pill" data-value="instantsplat"><a class="nav-link">InstantSplat <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                                <li class="nav-item method-pill" data-value="zeronvs"><a class="nav-link">ZeroNVS* <span style="font-size: 10px;"><br>(3/4 View)</span></a></li>
+                                <li class="nav-item method-pill" data-value="viewcrafter"><a class="nav-link">ViewCrafter <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
+                                <li class="nav-item method-pill" data-value="2dgs_mesh"><a class="nav-link">2DGS* Mesh <span style="font-size: 10px;"><br>(3/4 View)</span></a> </li>
+                                <!-- <li class="nav-item method-pill" data-value="reconfusion"><a class="nav-link">ReconFusion <span style="font-size: 10px;"><br>(3 View)</span></a></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="btn-group btn-group-sm col-md-2 d-flex align-items-center" style="padding-top: 5px" id="mode-buttons">
+                            <!-- <button class="btn btn-primary mode-pill float-right active" data-value="rgb">
+                                RGB
+                            </button> -->
+                            <!-- <button class="btn btn-primary mode-pill float-right" data-value="depth">
+                                Depth
+                            </button> -->
+                        </div>
+                    </div>
+
+                    <div class="video-container container position-relative p-0">
+
+                        <video class="video col-6" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
+                        </video>
+                        <canvas height=0 class="videoMerge" id="single-comp-leftMerge" style="width: 60%;"></canvas>
+                        <!-- <video class="video col-6" id="single-comp-right" loop playsinline autoplay muted onplay="resizeAndPlay(this)" >
+                        </video>
+                        <canvas height=0 class="videoMerge" id="single-comp-rightMerge" style="width: 80%;"></canvas> -->
+
+                        <!-- <div class="overlay position-absolute bg-dark top-0 start-0 text-white p-1 opacity-75"
+                            id="single-comp-label-left">Baseline</div>
+                        <div class="overlay position-absolute bg-dark top-0 start-50 text-white p-1 opacity-75"
+                            id="single-comp-label-right">Ours</div> -->
+                    </div>
+
+                    <div class="pill-row scene-pills" id="any-pills" role="group" aria-relevant="additions text">
+                        <div class="pill scene-pill" data-value="bicycle">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/bicycle.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="bonsai">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/bonsai.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="counter">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/counter.png">
+                        </div>
+
+                        <!-- <div class="pill scene-pill" data-value="flowers">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/flowers.png">
+                        </div> -->
+
+                        <div class="pill scene-pill" data-value="garden">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/garden.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="kitchen">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/kitchen.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="room">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/room.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="stump">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/stump.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="treehill">
+                            <img class="card-img" src="thumbnails/3views/Mip-NeRF360/treehill.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Barn">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Barn.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Caterpillar">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Caterpillar.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Family">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Family.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Horse">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Horse.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Ignatius">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Ignatius.png">
+                        </div>
+
+                        <div class="pill scene-pill" data-value="Truck">
+                            <img class="card-img" src="thumbnails/4views/tanks_and_temples/Truck.png">
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    playbackSpeeds = {
+                        "fsgs": [1.0, 1.0],
+                        "instantsplat": [1.0, 1.0],
+                        "viewcrafter": [1.0, 1.0],
+                        "zeronvs": [1.0, 1.0],
+                        "2dgs_mesh": [1.0, 1.0],
+                        // "image_dream": [1.0, 1.0],
+                    };
+
+                    aspectRatios = {
+                        "fsgs": 1.5,
+                        "instantsplat": 1.5,
+                        "viewcrafter": 1.5,
+                        "zeronvs": 1.5,
+                        "2dgs_mesh": 1.5,
+                        // "image_dream": 1.0,
+                    }
+
+                    labels = {
+                        "fsgs": "FSGS*",
+                        "instantsplat": "InstantSplat",
+                        "viewcrafter": "ViewCrafter",
+                        "zeronvs": "ZeroNVS*",
+                        "2dgs_mesh": "2DGS*",
+                        // "image_dream": "ImageDream",
+                    }
+
+                    compareDiv = document.querySelector("#single-image-compare")
+                    activeMethod = "fsgs"
+                    activeScene = "bicycle"
+                    activeMode = "rgb"
+
+                    // Select all elements with the class 'method-pill'
+                    const methodPills = compareDiv.querySelectorAll('.method-pill');
+                    const modePillParent = compareDiv.querySelector('#mode-buttons')
+                    const modePills = modePillParent.querySelectorAll('.mode-pill')
+
+                    for (modePill of modePills) {
+                        modePill.addEventListener('click', function () {
+                            // activeMode = this.getAttribute('data-value');
+                            activeMode = 'rgb'
+                            updateDisplay();
+                        });
+                    }
+
+
+                    const videoParent = compareDiv.querySelector(".video-container");
+                    const leftVideo = videoParent.querySelector('#single-comp-left')
+                    const leftLabel = videoParent.querySelector("#single-comp-label-left")
+                    // const rightVideo = videoParent.querySelector('#single-comp-right')
+                    const scenePillContainers = compareDiv.querySelectorAll(`.scene-pills`);
+
+                    for (methodPill of methodPills) {
+                        const method = methodPill.getAttribute('data-value');
+                        // Select all scene pill containers
+                        const scenePillContainer = compareDiv.querySelector(`#any-pills`);
+                        const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
+
+                        for (scenePill of scenePills) {
+                            scenePill.addEventListener('click', function () {
+                                activeScene = this.getAttribute("data-value")
+                                console.log(activeScene);
+                                updateDisplay();
+                            });
+                        }
+
+                        // Attach a click event listener to each pill
+                        methodPill.addEventListener('click', function () {
+                            activeMethod = method
+                            activeMode = "rgb"
+                            const scenePillContainer = compareDiv.querySelector(`#any-pills`);
+                            const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
+                            activeScene = scenePills[0].getAttribute("data-value")
+                            updateDisplay();
+                        });
+                    }
+
+                    function updateDisplay() {
+                        if (activeMethod == 'image_dream') {
+                            modePillParent.style.display = 'none';
+                        } else {
+                            modePillParent.style.display = '';
+                        }
+                        // Update active pill
+
+                        methodPills.forEach(p => p.classList.remove('active'));
+                        methodPills.forEach(methodPill => {
+                            if (methodPill.getAttribute('data-value') == activeMethod) {
+                                methodPill.querySelector('a').classList.add('active');
+                            } else {
+                                methodPill.querySelector('a').classList.remove('active')
+                            }
+                        });
+
+                        // Update mode pill
+                        for (modePill of modePills) {
+                            if (modePill.getAttribute('data-value') === activeMode) {
+                                modePill.classList.add('active');
+                            } else {
+                                modePill.classList.remove('active');
+                            }
+                        }
+
+                        // Show/Hide scene pill containers based on the selected method
+                        scenePillContainers.forEach(container => {
+                            if (container.id === `any-pills`) {
+                                container.style.display = ''; // Or 'block' depending on your layout
+                            } else {
+                                container.style.display = 'none';
+                            }
+                        });
+
+                        const scenePillContainer = compareDiv.querySelector(`#any-pills`);
+                        const scenePills = scenePillContainer.querySelectorAll(".scene-pill")
+
+                        for (scenePill of scenePills) {
+                            if (scenePill.getAttribute('data-value') == activeScene) {
+                                scenePill.classList.add('active');
+                            } else {
+                                scenePill.classList.remove('active')
+                            }
+                        }
+
+                        var zdist = "";
+                        if (activeMode == "depth") {
+                            zdist = "_zdist";
+                        }
+
+                        // Update video display. This still has a small flash, could double buffer the video like before, but
+                        // as long as the layout stays consistent it really isn't bad.
+                        // leftVideo.src = `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
+                        leftVideo.src = activeMethod === '2dgs_mesh' ? 
+                            `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.webm` :
+                            `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
+                        var [lr, rr] = playbackSpeeds[activeMethod];
+                        leftVideo.playbackRate = lr;
+                        // rightVideo.playbackRate = rr;
+
+                        videoParent.style.aspectRatio = aspectRatios[activeMethod] * 2.0;
+
+                        console.log(leftLabel)
+                        console.log(leftLabel.innerHtml)
+
+                        leftLabel.innerHTML = labels[activeMethod];
+                    }
+                    // Update initial display
+                    updateDisplay()
+                </script>
+            </div>
         </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
+
+      </div>   
+    </div>        
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -823,14 +797,7 @@
                   <li class="method-pill" data-value="scaleshift"
                       onclick="selectCompVideo(this, activeScenePill)"><a>Scale & Shift</a></li>
               </ul>
-              <!-- <ul class="nav nav-pills center-pills">
-                  <li class="method-pill" data-value="freenerf"
-                      onclick="selectCompVideo(this, activeScenePill)"><a>FreeNeRF</a></li>
-                  <li class="method-pill" data-value="simplenerf"
-                      onclick="selectCompVideo(this, activeScenePill)"><a>SimpleNeRF</a></li>
-                  <li class="method-pill" data-value="zeronvs"
-                      onclick="selectCompVideo(this, activeScenePill)"><a>ZeroNVS</a></li>
-              </ul> -->
+             
           </div>
 
           <script>
