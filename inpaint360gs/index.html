@@ -439,43 +439,20 @@
 
 
 
+
+
+
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2">Visualization Results</h2>
+        <h2 class="title is-2">Visualization Results Free360</h2>
       </div>
     </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="columns is-centered">
@@ -631,11 +608,11 @@
                     activeMode = "rgb"
 
                     // Select all elements with the class 'method-pill'
-                    const methodPills = compareDiv.querySelectorAll('.method-pill');
-                    const modePillParent = compareDiv.querySelector('#mode-buttons')
-                    const modePills = modePillParent.querySelectorAll('.mode-pill')
+                    const methodPills_base = compareDiv.querySelectorAll('.method-pill');
+                    const modePillParent_base = compareDiv.querySelector('#mode-buttons')
+                    const modePills_base = modePillParent_base.querySelectorAll('.mode-pill')
 
-                    for (modePill of modePills) {
+                    for (modePill of modePills_base) {
                         modePill.addEventListener('click', function () {
                             // activeMode = this.getAttribute('data-value');
                             activeMode = 'rgb'
@@ -644,13 +621,13 @@
                     }
 
 
-                    const videoParent = compareDiv.querySelector(".video-container");
-                    const leftVideo = videoParent.querySelector('#single-comp-left')
-                    const leftLabel = videoParent.querySelector("#single-comp-label-left")
-                    // const rightVideo = videoParent.querySelector('#single-comp-right')
-                    const scenePillContainers = compareDiv.querySelectorAll(`.scene-pills`);
+                    const videoParent_base = compareDiv.querySelector(".video-container");
+                    const leftVideo_base = videoParent_base.querySelector('#single-comp-left')
+                    const leftLabel_base = videoParent_base.querySelector("#single-comp-label-left")
+                    // const rightVideo = videoParent_base.querySelector('#single-comp-right')
+                    const scenePillContainers_base = compareDiv.querySelectorAll(`.scene-pills`);
 
-                    for (methodPill of methodPills) {
+                    for (methodPill of methodPills_base) {
                         const method = methodPill.getAttribute('data-value');
                         // Select all scene pill containers
                         const scenePillContainer = compareDiv.querySelector(`#any-pills`);
@@ -677,14 +654,14 @@
 
                     function updateDisplay() {
                         if (activeMethod == 'image_dream') {
-                            modePillParent.style.display = 'none';
+                            modePillParent_base.style.display = 'none';
                         } else {
-                            modePillParent.style.display = '';
+                            modePillParent_base.style.display = '';
                         }
                         // Update active pill
 
-                        methodPills.forEach(p => p.classList.remove('active'));
-                        methodPills.forEach(methodPill => {
+                        methodPills_base.forEach(p => p.classList.remove('active'));
+                        methodPills_base.forEach(methodPill => {
                             if (methodPill.getAttribute('data-value') == activeMethod) {
                                 methodPill.querySelector('a').classList.add('active');
                             } else {
@@ -693,7 +670,7 @@
                         });
 
                         // Update mode pill
-                        for (modePill of modePills) {
+                        for (modePill of modePills_base) {
                             if (modePill.getAttribute('data-value') === activeMode) {
                                 modePill.classList.add('active');
                             } else {
@@ -702,7 +679,7 @@
                         }
 
                         // Show/Hide scene pill containers based on the selected method
-                        scenePillContainers.forEach(container => {
+                        scenePillContainers_base.forEach(container => {
                             if (container.id === `any-pills`) {
                                 container.style.display = ''; // Or 'block' depending on your layout
                             } else {
@@ -728,20 +705,20 @@
 
                         // Update video display. This still has a small flash, could double buffer the video like before, but
                         // as long as the layout stays consistent it really isn't bad.
-                        // leftVideo.src = `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
-                        leftVideo.src = activeMethod === '2dgs_mesh' ? 
+                        // leftVideo_base.src = `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
+                        leftVideo_base.src = activeMethod === '2dgs_mesh' ? 
                             `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.webm` :
                             `videos/comparison_slider/${activeMethod}/${activeScene}${zdist}.mp4`
                         var [lr, rr] = playbackSpeeds[activeMethod];
-                        leftVideo.playbackRate = lr;
+                        leftVideo_base.playbackRate = lr;
                         // rightVideo.playbackRate = rr;
 
                         videoParent.style.aspectRatio = aspectRatios[activeMethod] * 2.0;
 
-                        console.log(leftLabel)
-                        console.log(leftLabel.innerHtml)
+                        console.log(leftLabel_base)
+                        console.log(leftLabel_base.innerHtml)
 
-                        leftLabel.innerHTML = labels[activeMethod];
+                        leftLabel_base.innerHTML = labels[activeMethod];
                     }
                     // Update initial display
                     updateDisplay()
@@ -753,6 +730,9 @@
     </div>        
 
 
+      
+  </div>
+</section>
 
 
 
@@ -760,15 +740,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2">Visualization Results</h2>
+      </div>
+    </div>
     
-
-
-
-
-
-
-
-
 
     <div class="columns is-centered">
       <div class="column is-full-width">
