@@ -369,7 +369,7 @@ input:checked + .slider:after
 
 
 .results-carousel .item {
-  height: 520px;          /* change height of video */
+  height: 460px;          /* change height of video */
   display: flex;
   justify-content: center;
   align-items: center;
