@@ -118,28 +118,29 @@
             <strong>CVPR 2026</strong></h3> -->
           <div class="is-size-3 publication-authors">
             <span class="author-block">
-              <a href="https://shaoxiang777.github.io/">Shaoxiang Wang</a><sup>1</sup>,
+              <a href="https://shaoxiang777.github.io/">Shaoxiang Wang</a><sup>1,2</sup>,
             </span>
             <span class="author-block"> 
-              <a href="https://www.linkedin.com/in/shihong-zhang-97861a293/">Shihong Zhang</a><sup>2</sup>,
+              <a href="https://www.linkedin.com/in/shihong-zhang-97861a293/">Shihong Zhang</a><sup>3</sup>,
             </span>  
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=8p9OOd0AAAAJ&hl=en&oi=sra">Christen Millerdurai</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.professoren.tum.de/westermann-ruediger">Rüdiger Westermann</a><sup>2</sup>,
+              <a href="https://www.professoren.tum.de/westermann-ruediger">Rüdiger Westermann</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.dfki.de/en/web/about-us/employee/person/dist01">Didier Stricker</a><sup>1</sup>
+              <a href="https://www.dfki.de/en/web/about-us/employee/person/dist01">Didier Stricker</a><sup>1,2</sup>
             </span>
             <span class="author-block">
-              <a href="https://www.dfki.de/en/web/about-us/employee/person/alpa02">Alain Pagani</a><sup>1</sup>,
+              <a href="https://www.dfki.de/en/web/about-us/employee/person/alpa02">Alain Pagani</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-3 publication-authors">
             <span class="author-block"><sup>1</sup>German Research Center for Artificial Intelligence(DFKI),</span>
-            <span class="author-block"><sup>2</sup>Technical University of Munich</span>
+            <span class="author-block"><sup>2</sup>RTPU,</span>
+            <span class="author-block"><sup>3</sup>Technical University of Munich</span>
           </div>
 
           <div class="column has-text-centered">
@@ -224,7 +225,7 @@
 
 
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="pipeline-figure">
@@ -235,6 +236,22 @@
       </div>
       <h2 class="subtitle is-3 has-text-centered">
         <span class="subtitle is-3 "><strong>Inpaint360GS</strong></span> can perform flexible object-aware inpainting in a 360° unbounded scene.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="pipeline-figure" style="display: flex; justify-content: center;">
+        <video autoplay muted loop playsinline controls style="width: 80%; max-width: 600px; border-radius: 10px;">
+          <source src="./videos/intro_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <h2 class="subtitle is-3 has-text-centered">
+        <span class="subtitle is-3"><strong>Inpaint360GS</strong></span> can perform flexible object-aware inpainting in a 360° unbounded scene.
       </h2>
     </div>
   </div>
@@ -476,21 +493,21 @@
 
 
 
-            <div class="text-center">
+            <!-- <div class="text-center">
               <div class="video-container d-flex justify-content-center align-items-center p-0">
                 <video class="video" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)">
                 </video>
                 <canvas height="0" class="videoMerge" id="single-comp-leftMerge" style="width: 80%;"></canvas>
-                <!-- <span id="single-comp-label-left" style="display:block; font-weight:bold; margin-top:10px; color:white;"></span> -->
+        
                 
-                <!-- 左下角标签（方法名） -->
+                左下角标签（方法名）
                 <span id="single-comp-label-left" 
                       style="position:absolute; bottom:10px; left:100px; font-weight:bold; 
                             color:white; background:rgba(0,0,0,0.5); 
                             padding:5px 10px; border-radius:6px; font-size:20px;">
                 </span>
 
-                <!-- 右下角标签（固定 Ours） -->
+                右下角标签（固定 Ours）
                 <span id="single-comp-label-right" 
                       style="position:absolute; bottom:10px; right:100px; font-weight:bold; 
                             color:white; background:rgba(0,0,0,0.5); 
@@ -499,7 +516,22 @@
                 </span>
 
               </div>
+            </div> -->
+
+
+            <div class="text-center">
+              <div class="video-container d-flex justify-content-center align-items-center p-0" style="position: relative; display: inline-block; width: 80%; max-width: 900px;">
+                <video class="video" id="single-comp-left" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="width:100%; height:auto;">
+                </video>
+                <canvas height="0" class="videoMerge" id="single-comp-leftMerge" style="width:100%;"></canvas>
+
+                <span id="single-comp-label-left"></span>
+                <span id="single-comp-label-right">Ours</span>
+
+              </div>
             </div>
+
+
 
 
 
@@ -862,7 +894,8 @@
     <!-- Acknowledgements -->
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgements</h2>
-      This research has been partially funded by the EU projects CORTEX2 (GA Nr 101070192) and LUMINOUS (GA Nr 101135724). We sincerely thank
+      This work has been partially supported by the EU projects CORTEX2 (GA No.  101070192) and LUMINOUS (GA No. 101135724), as well as by the German Research Foundation (DFG, GA No. 564809505).
+      We sincerely thank
       <a href="https://arxiv.org/abs/2312.00732">GauGroup</a>, 
       <a href="https://arxiv.org/abs/2404.07977">Gaga</a>,
       <a href="https://arxiv.org/abs/2404.11613">Infusion</a> for their excellent work</a>!

@@ -68,6 +68,7 @@ body {
 }
 
 .publication-authors {
+  margin-bottom: 0.5em;
 }
 
 .publication-authors a {
@@ -80,6 +81,7 @@ body {
 
 .author-block {
   display: inline-block;
+  margin-right: 1em;
 }
 
 .publication-banner img {
@@ -475,4 +477,34 @@ input:checked + .slider:after
 .active,
 .dot0:hover {
   background-color: #717171;
+}
+
+
+#single-comp-label-left,
+#single-comp-label-right {
+  font-size: 0.9vw;
+  position: absolute;
+  bottom: 0.5em;
+  font-weight: bold;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+#single-comp-label-left {
+  left: 0.5em;
+}
+
+#single-comp-label-right {
+  right: 0.5em;
+}
+
+/* 手机上固定最小 12px */
+@media (max-width: 768px) {
+  #single-comp-label-left,
+  #single-comp-label-right {
+    font-size: 12px;
+  }
 }
